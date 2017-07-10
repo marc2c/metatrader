@@ -23,17 +23,17 @@ bool CloseAllOrders(int magicNumber) export
 			}
 
 			if ((OrderMagicNumber() == magicNumber) && (OrderSymbol() == Symbol())) {
-   			if (OrderType() == OP_BUY) {
-   			   if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_BID), 15, Green)) {
-   			      result = false;
-   			   }
-   			}
-   			if (OrderType() == OP_SELL) {
-   			   if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_ASK), 15, Red)) {
-   			      result = false;
-   			   }
-   			}
-			}
+   			    if (OrderType() == OP_BUY) {
+   			        if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_BID), 15, Green)) {
+   			            result = false;
+   			        }
+   			    }
+   			    if (OrderType() == OP_SELL) {
+   			        if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_ASK), 15, Red)) {
+   			            result = false;
+   			       }
+   			    }
+		    }
 		}
 
 		Sleep(SLEEP_TIME);
