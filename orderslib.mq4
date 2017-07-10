@@ -17,7 +17,7 @@ bool CloseAllOrders(int magicNumber) export
     bool result = true;
 
     while (OrdersTotal() > 0) {
-	    for (i=OrdersTotal()-1; i>=0; i--) {
+        for (i=OrdersTotal()-1; i>=0; i--) {
             if (!OrderSelect(i, SELECT_BY_POS)) {
                 continue;
             }
