@@ -24,7 +24,7 @@ bool CloseAllOrders(int magicNumber) export
 
             if ((OrderMagicNumber() == magicNumber) && (OrderSymbol() == Symbol())) {
                 if (OrderType() == OP_BUY) {
-                    if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_BID), 15, Green)) {
+                    if (!OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_BID), 15, Red)) {
                         result = false;
                     }
                 }
